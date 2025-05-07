@@ -8,7 +8,6 @@ public class CameraController : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position = m_target.transform.TransformPoint(m_offset);
-        //Vector3 direction = m_target.transform.forward;
         Vector3 direction = m_target.transform.position - transform.position;
         transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
     }
